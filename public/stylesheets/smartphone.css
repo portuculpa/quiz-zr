@@ -2,5 +2,8 @@ body                { background: #333; font-size: xx-large; }
 
 #page-wrap::after   { content: "Smartphone Layout"; }
 
+#autorem {float: left; width: 360px;}
+video {float: left; width: 360px;}
+
 h2 span, section h3 { display: none; }
 footer, input       { font-size: large; }
