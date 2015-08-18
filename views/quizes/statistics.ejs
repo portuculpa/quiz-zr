@@ -1,0 +1,9 @@
+<div>
+	<table width="50%">
+		<tr><td>Número de preguntas</td><td><%= statistics.nquizes %></td></tr>
+		<tr><td>Número de comentarios</td><td><%= statistics.ncomments %></td></tr>
+		<tr><td>Comentarios por pregunta</td><td><%= statistics.ncomments/statistics.nquizes %></td></tr>
+		<tr><td>Preguntas con comentarios</td><td><%= statistics.nquizWithComments %></td></tr>
+		<tr><td>Preguntas sin comentarios</td><td><%=  statistics.nquizes - statistics.nquizWithComments %></td></tr>
+	</table>
+</div>

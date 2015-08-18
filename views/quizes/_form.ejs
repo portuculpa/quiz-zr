@@ -1,15 +1,26 @@
-﻿<p><label for="tem" class="rem">Tema:</label>
-<select id="tem" name="quiz[tema]">
-<option value="otro" <% if(quiz.tema==='otro'){ %>selected<%}%>>Otro</option>
-<option value="humanidades" <% if(quiz.tema==='humanidades'){ %>selected<%}%>>Humanidades</option>
-<option value="ocio" <% if(quiz.tema==='ocio'){ %>selected<%}%>>Ocio</option>
-<option value="ciencia" <% if(quiz.tema==='ciencia'){ %>selected<%}%>>Ciencia</option>
-<option value="tecnologia" <% if(quiz.tema==='tecnologia'){ %>selected<%}%>>Tecnología</option>
- </select>
+<p>
+	<label for="preg" class="rem">Pregunta:</label>
+	<input type="text" id="preg" name="quiz[pregunta]" value="<%= quiz.pregunta %>"/>
 </p>
-<p><label for="preg" class="rem">Pregunta:</label>
-<input type="text" id="preg" name="quiz[pregunta]" value="<%= quiz.pregunta %>"/></p>
-<p><label for="resp" class="rem">Respuesta:</label>
-<input type="text" id="resp" name="quiz[respuesta]" value="<%= quiz.respuesta %>"/></p>
-<button type="button" onClick="javascript: location.replace('/quizes');">Cancelar</button>
-<button type="submit">Salvar</button>
+
+<p>
+	<label for="resp" class="rem">Respuesta:</label>
+	<input type="text" id="resp" name="quiz[respuesta]" value="<%= quiz.respuesta %>"/>
+</p>
+
+<p>
+	<label for="tema" class="rem">Temática:</label>
+	<select id="tema" name="quiz[tematica]">
+	  <option value="">Seleccione una temática</option>
+	  <option value="Ciencia" <%= quiz.tematica === 'ciencia' ? 'selected' : '' %> >Ciencia</option>
+	  <option value="Humanidades" <%= quiz.tematica === 'Humanidades' ? 'selected' : '' %> >Humanidades</option>
+	  <option value="Ocio" <%= quiz.tematica === 'Ocio' ? 'selected' : '' %> >Ocio</option>
+	  <option value="Tecnología" <%= quiz.tematica === 'Tecnologia' ? 'selected' : '' %> >Tecnología</option>
+	  <option value="Otros" <%= quiz.tematica === 'Otros' ? 'selected' : '' %> >Otros</option>
+	</select>	
+</p>
+
+
+<a href="/quizes"><button type="button">Cancelar</button></a>
+
+<input type="submit" value="Guardar" />
